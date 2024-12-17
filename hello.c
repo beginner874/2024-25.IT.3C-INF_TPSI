@@ -88,3 +88,61 @@ int main (LAB03) {
     }
 }
 
+int main (LAB04) {
+    int A, B, C, D, E, F;
+     printf("Inserisci il valore di A (0 o 1):\n");
+    scanf("%d", &A);
+    printf("Hai inserito il valore A: %d\n", A);
+
+     printf("Inserisci il valore di B (0 o 1):\n");
+    scanf("%d", &B);
+    printf("Hai inserito il valore B: %d\n", B);
+
+     printf("Inserisci il valore di C (0 o 1):\n");
+    scanf("%d", &C);
+    printf("Hai inserito il valore C: %d\n", C);
+
+     printf("Inserisci il valore di D (0 o 1):\n");
+    scanf("%d", &D);
+    printf("Hai inserito il valore D: %d\n", D);
+
+     printf("Inserisci il valore di E (0 o 1):\n");
+    scanf("%d", &E);
+    printf("Hai inserito il valore E: %d\n", E);
+
+     printf("Inserisci il valore di F (0 o 1):\n");
+    scanf("%d", &F);
+    printf("Hai inserito il valore F: %d\n", F);
+
+
+    if (A != 0 && A != 1 && B != 0 && B != 1 && C != 0 && C != 1 && D != 0 && D != 1 && E != 0 && E != 1 && F != 0 && F != 1) {
+        printf("I valori inseriti non sono 1 o 0\n");
+    } else {
+        
+        printf("I valori inseriti sono 1 o 0\n");
+
+        printf("i valori di A e B vengono trasferiti nella porta AND  \n");
+        int AB = AND(A,B);
+        printf("Il valore di uscita della porta AND (AB)  è: %d\n", AB);
+
+        printf("i valori di C e D vengono trasferiti nella porta OR  \n");
+        int CD = AND(C,D);
+        printf("Il valore di uscita della porta AND (CD)  è: %d\n", CD);
+
+        printf("i valori di E e F vengono trasferiti nella porta AND  \n");
+        int EF = AND(E,F);
+        printf("Il valore di uscita della porta AND (EF)  è: %d\n", EF);
+
+        printf("il valore di AB viene trasferito nella porta NOT  \n");
+        int P1 = NOT(AB);
+        printf("Il valore di uscita della porta NOT (P1)  è: %d\n", P1);
+
+        printf("i valori di CD e EF vengono trasferiti nella porta AND  \n");
+        int P2 = AND(CD,EF);
+        printf("Il valore di uscita della porta AND (P2)  è: %d\n", P2);
+
+        printf("i valori di P1 e P2 vengono trasferiti nella porta OR  \n");
+        int Q = OR(P1,P2);
+        printf("Il valore di uscita della porta OR (Q valore finale)  è: %d\n", Q);
+}
+}
