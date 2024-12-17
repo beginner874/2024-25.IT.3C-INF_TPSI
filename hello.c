@@ -19,7 +19,7 @@ int OR(int a, int B) {
     // TODO aggiungere l'espressione matematica per soddisfare la porta OR
     return a + B - a * B;
 }
-int main() {
+int esempio() {
     // Dichiara una variabile
     int A, B;
 
@@ -59,8 +59,7 @@ int main() {
         printf("Il valore di uscita della porta OR è: %d\n", orAB);
     }
 }
-
-int LAB03 () {
+int main (LAB03) {
     int A, B;
     printf("Inserisci il valore di A (0 o 1):\n");
     scanf("%d", &A);
@@ -75,13 +74,15 @@ int LAB03 () {
         
         printf("I valori inseriti sono 1 o 0\n");
 
-        printf("i valori di A e B vengono trasferiti nella porta OR di uscita viene nominata P1");
+        printf("i valori di A e B vengono trasferiti nella porta OR \n");
         int P1 = OR(A,B);
-        printf("i valori di A e P1 vengono trasferiti nella porta and di uscita viene nominata P2");
+        printf("Il valore di uscita della porta OR (P1)  è: %d\n", P1);
+        printf("i valori di A e P1 vengono trasferiti nella porta and di uscita viene nominata P2  \n");
         int P2 = AND(P1,A);
-        printf("il valore di P2 viene trasferita nella porta not di uscita viene nominata Q");
+         printf("Il valore di uscita della porta AND (P2)  è: %d\n", P2);
+        printf("il valore di P2 viene trasferita nella porta not di uscita viene nominata Q  \n");
         int Q = NOT(P2);
-        printf("Il valore finale ovvero di Q e: %d\n", Q);
+        printf("Il valore di uscita della porta NOT (Q) e: %d\n", Q);
         
     }
 }
