@@ -60,7 +60,7 @@ int esempio() {
     }
 }
 
-int main (LAB03) {
+int LAB03 () {
     int A, B;
     printf("Inserisci il valore di A (0 o 1):\n");
     scanf("%d", &A);
